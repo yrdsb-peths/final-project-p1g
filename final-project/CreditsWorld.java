@@ -16,6 +16,6 @@ public class CreditsWorld extends World
     public CreditsWorld()
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
-        super(600, 400, 1); 
+        super(720, 900, 1); 
     }
 }
