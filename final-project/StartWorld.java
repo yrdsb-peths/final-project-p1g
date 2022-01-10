@@ -16,6 +16,6 @@ public class StartWorld extends World
     public StartWorld()
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
-        super(720, 900, 1); 
+        super(600, 400, 1); 
     }
 }
