@@ -9,8 +9,8 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class CreditsWorld extends World
 {
     private GreenfootImage background;
-    private Font titleFont = new Font ("Calibri", false, false, 30);
-    private Font subtitleFont = new Font ("Calibri", false, false, 24);
+    private Font titleFont = new Font ("Calibri", false, false, 24);
+    private Font subtitleFont = new Font ("Calibri", false, false, 20);
     /**
      * Constructor for objects of class CreditsWorld.
      * 
@@ -24,12 +24,12 @@ public class CreditsWorld extends World
         //Creates credit header
         background.setFont(titleFont);
         background.setColor(Color.WHITE);
-        background.drawString("Credits", 300, 80);
+        background.drawString("Credits", 300, 120);
         
         //Credits
         background.setFont(subtitleFont);
-        background.drawString("Game created by: Sherman L., Marissa A., and Carmen P.", 70, 140);
-        background.drawString("Most assets were from the internet\nand are free to use for non-commercial purposes", 70, 180);
+        background.drawString("Game created by: Sherman L., Marissa A., and Carmen P.", 80, 200);
+        background.drawString("Most assets were from the internet\nand are free to use for non-commercial purposes", 80, 230);
 
     }
 }

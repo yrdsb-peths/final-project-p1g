@@ -1,24 +1,24 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Instructions for the game. Buttons to go back or start playing.
+ * If the player loses, they go to the LoseWorld
  * 
- * @author Sherman, Marissa and Carmen
+ * @author Sherman, Marissa, and Carmen 
  * @version January 2022
  */
-public class InstructionsWorld extends World
+public class LoseWorld extends World
 {
     private GreenfootImage background;
     private Font titleFont = new Font ("Calibri", false, false, 24);
     private Font subtitleFont = new Font ("Calibri", false, false, 20);
     
-    private Button backButton;
-    private Button startButton;
+    private Button quitButton;
+    private Button replayButton;
     /**
-     * Constructor for objects of class InstructionsWorld.
+     * Constructor for objects of class LoseWorld.
      * 
      */
-    public InstructionsWorld()
+    public LoseWorld()
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(720, 900, 1); 
@@ -27,18 +27,17 @@ public class InstructionsWorld extends World
         // title
         background.setFont(titleFont);
         background.setColor(Color.WHITE);
-        background.drawString("Instructions", 300, 120);
+        background.drawString("YOU LOSE!", 300, 120);
         
         // instructions
         background.setFont(subtitleFont);
-        background.drawString("Move using the left and right arrow keys", 80, 200);
-        background.drawString("Shoot targets using the space bar", 80, 230);
+        background.drawString("Better luck next time!", 260, 200);
         
         // buttons
-        backButton = new Button ("Go Back");
-        addObject (backButton, 150, 720);
-        startButton = new Button ("Start Game");
-        addObject (startButton, 570, 720);
+        quitButton = new Button ("Quit");
+        addObject (quitButton, 150, 720);
+        replayButton = new Button ("Replay");
+        addObject (replayButton, 570, 720);
     }
     
     public void act(){
@@ -46,10 +45,10 @@ public class InstructionsWorld extends World
     }
     
     private void checkMouse(){
-        if (Greenfoot.mouseClicked(backButton)){
+        if (Greenfoot.mouseClicked(quitButton)){
             Greenfoot.setWorld(new StartWorld());
         }
-        if (Greenfoot.mouseClicked(startButton)){
+        if (Greenfoot.mouseClicked(replayButton)){
             Greenfoot.setWorld(new GameWorld());
         }
     }
