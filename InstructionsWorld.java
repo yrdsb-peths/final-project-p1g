@@ -1,10 +1,10 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class InstructionsWorld here.
+ * Instructions for the game. Buttons to go back or start playing.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author Marissa Abesdris 
+ * @version January 2022
  */
 public class InstructionsWorld extends World
 {
@@ -13,6 +13,7 @@ public class InstructionsWorld extends World
     private Font subtitleFont = new Font ("Calibri", false, false, 20);
     
     private Button backButton;
+    private Button startButton;
     /**
      * Constructor for objects of class InstructionsWorld.
      * 
@@ -35,6 +36,21 @@ public class InstructionsWorld extends World
         
         // buttons
         backButton = new Button ("Go Back");
-        addObject (backButton, 160, 150);
+        addObject (backButton, 150, 590);
+        startButton = new Button ("Start Game");
+        addObject (startButton, 570, 590);
+    }
+    
+    public void act(){
+        checkMouse();
+    }
+    
+    private void checkMouse(){
+        if (Greenfoot.mouseClicked(backButton)){
+            Greenfoot.setWorld(new StartWorld());
+        }
+        if (Greenfoot.mouseClicked(startButton)){
+            Greenfoot.setWorld(new GameWorld());
+        }
     }
 }
