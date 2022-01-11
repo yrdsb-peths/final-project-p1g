@@ -11,6 +11,8 @@ public class InstructionsWorld extends World
     private GreenfootImage background;
     private Font titleFont = new Font ("Calibri", false, false, 24);
     private Font subtitleFont = new Font ("Calibri", false, false, 20);
+    
+    private Button backButton;
     /**
      * Constructor for objects of class InstructionsWorld.
      * 
@@ -30,5 +32,9 @@ public class InstructionsWorld extends World
         background.setFont(subtitleFont);
         background.drawString("Move using the left and right arrow keys", 80, 140);
         background.drawString("Shoot targets using the space bar", 80, 170);
+        
+        // buttons
+        backButton = new Button ("Go Back");
+        addObject (backButton, 160, 150);
     }
 }

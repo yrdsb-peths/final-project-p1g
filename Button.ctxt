@@ -1,0 +1,8 @@
+#BlueJ class context
+comment0.target=Button
+comment1.params=text
+comment1.target=Button(java.lang.String)
+comment2.params=
+comment2.target=void\ draw()
+comment2.text=\n\ \ \ \ public\ void\ act()\ \n\ \ \ \ {\n\ \ \ \ \ \ \ \ if\ (isTouching(Player.class)){\n\ \ \ \ \ \ \ \ \ \ \ \ setImage(touchingImage);\n\ \ \ \ \ \ \ \ \ \ \ \ touching\ \=\ true;\n\ \ \ \ \ \ \ \ }\ else\ {\n\ \ \ \ \ \ \ \ \ \ \ \ setImage(image);\n\ \ \ \ \ \ \ \ \ \ \ \ touching\ \=\ false;\n\ \ \ \ \ \ \ \ }\n\ \ \ \ }\ \ \ \ \n\n\ \ \ \ public\ boolean\ touchingPlayer(){\n\ \ \ \ \ \ \ \ return\ touching;\n\ \ \ \ }\n
+numComments=3
