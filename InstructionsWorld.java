@@ -14,6 +14,7 @@ public class InstructionsWorld extends World
     
     private Button backButton;
     private Button startButton;
+    private Button creditButton;
     /**
      * Constructor for objects of class InstructionsWorld.
      * 
@@ -33,12 +34,15 @@ public class InstructionsWorld extends World
         background.setFont(subtitleFont);
         background.drawString("Move using the left and right arrow keys", 80, 140);
         background.drawString("Shoot targets using the space bar", 80, 170);
+        background.drawString("Be mindful of how much time you have left!", 80, 200);
         
         // buttons
         backButton = new Button ("Go Back");
-        addObject (backButton, 150, 590);
+        addObject (backButton, 144, 675);
         startButton = new Button ("Start Game");
-        addObject (startButton, 570, 590);
+        addObject (startButton, 576, 675);
+        creditButton = new Button ("Credits");
+        addObject (creditButton, 360, 675);
     }
     
     public void act(){
@@ -51,6 +55,9 @@ public class InstructionsWorld extends World
         }
         if (Greenfoot.mouseClicked(startButton)){
             Greenfoot.setWorld(new GameWorld());
+        }
+        if (Greenfoot.mouseClicked(creditButton)){
+            Greenfoot.setWorld(new CreditsWorld());
         }
     }
 }
