@@ -4,5 +4,5 @@ comment1.params=text
 comment1.target=Button(java.lang.String)
 comment2.params=
 comment2.target=void\ draw()
-comment2.text=\r\n\ \ \ \ public\ void\ act()\ \r\n\ \ \ \ {\r\n\ \ \ \ \ \ \ \ if\ (isTouching(Player.class)){\r\n\ \ \ \ \ \ \ \ \ \ \ \ setImage(touchingImage);\r\n\ \ \ \ \ \ \ \ \ \ \ \ touching\ \=\ true;\r\n\ \ \ \ \ \ \ \ }\ else\ {\r\n\ \ \ \ \ \ \ \ \ \ \ \ setImage(image);\r\n\ \ \ \ \ \ \ \ \ \ \ \ touching\ \=\ false;\r\n\ \ \ \ \ \ \ \ }\r\n\ \ \ \ }\ \ \ \ \r\n\r\n\ \ \ \ public\ boolean\ touchingPlayer(){\r\n\ \ \ \ \ \ \ \ return\ touching;\r\n\ \ \ \ }\r\n
+comment2.text=\n\ \ \ \ public\ void\ act()\ \n\ \ \ \ {\n\ \ \ \ \ \ \ \ if\ (isTouching(Player.class)){\n\ \ \ \ \ \ \ \ \ \ \ \ setImage(touchingImage);\n\ \ \ \ \ \ \ \ \ \ \ \ touching\ \=\ true;\n\ \ \ \ \ \ \ \ }\ else\ {\n\ \ \ \ \ \ \ \ \ \ \ \ setImage(image);\n\ \ \ \ \ \ \ \ \ \ \ \ touching\ \=\ false;\n\ \ \ \ \ \ \ \ }\n\ \ \ \ }\ \ \ \ \n\n\ \ \ \ public\ boolean\ touchingPlayer(){\n\ \ \ \ \ \ \ \ return\ touching;\n\ \ \ \ }\n
 numComments=3
