@@ -1,12 +1,12 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * If the player loses, they go to the LoseWorld
+ * If the games ends, the player goes to the EndWorld
  * 
  * @author Sherman, Marissa, and Carmen 
  * @version January 2022
  */
-public class LoseWorld extends World
+public class EndWorld extends World
 {
     private GreenfootImage background;
     private Font titleFont = new Font ("Calibri", false, false, 24);
@@ -18,7 +18,7 @@ public class LoseWorld extends World
      * Constructor for objects of class LoseWorld.
      * 
      */
-    public LoseWorld()
+    public EndWorld()
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(720, 900, 1); 
@@ -27,11 +27,11 @@ public class LoseWorld extends World
         // title
         background.setFont(titleFont);
         background.setColor(Color.WHITE);
-        background.drawString("YOU LOSE!", 300, 120);
+        background.drawString("Good job!", 300, 120);
         
         // instructions
         background.setFont(subtitleFont);
-        background.drawString("Better luck next time!", 260, 200);
+        background.drawString("Would you like to play again?", 220, 200);
         
         // buttons
         quitButton = new Button ("Quit");

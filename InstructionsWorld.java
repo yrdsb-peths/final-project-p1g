@@ -3,7 +3,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 /**
  * Instructions for the game. Buttons to go back or start playing.
  * 
- * @author Marissa Abesdris 
+ * @author Sherman, Marissa and Carmen
  * @version January 2022
  */
 public class InstructionsWorld extends World
@@ -14,7 +14,6 @@ public class InstructionsWorld extends World
     
     private Button backButton;
     private Button startButton;
-    private Button creditButton;
     /**
      * Constructor for objects of class InstructionsWorld.
      * 
@@ -28,21 +27,19 @@ public class InstructionsWorld extends World
         // title
         background.setFont(titleFont);
         background.setColor(Color.WHITE);
-        background.drawString("Instructions", 300, 80);
+        background.drawString("Instructions", 300, 120);
         
         // instructions
         background.setFont(subtitleFont);
-        background.drawString("Move using the left and right arrow keys", 80, 140);
-        background.drawString("Shoot targets using the space bar", 80, 170);
-        background.drawString("Be mindful of how much time you have left!", 80, 200);
+        background.drawString("Move using the left and right arrow keys", 80, 200);
+        background.drawString("Shoot targets using the space bar", 80, 230);
+        background.drawString("Hit targets to get points!", 80, 270);
         
         // buttons
         backButton = new Button ("Go Back");
-        addObject (backButton, 144, 675);
+        addObject (backButton, 150, 720);
         startButton = new Button ("Start Game");
-        addObject (startButton, 576, 675);
-        creditButton = new Button ("Credits");
-        addObject (creditButton, 360, 675);
+        addObject (startButton, 570, 720);
     }
     
     public void act(){
@@ -55,9 +52,6 @@ public class InstructionsWorld extends World
         }
         if (Greenfoot.mouseClicked(startButton)){
             Greenfoot.setWorld(new GameWorld());
-        }
-        if (Greenfoot.mouseClicked(creditButton)){
-            Greenfoot.setWorld(new CreditsWorld());
         }
     }
 }
