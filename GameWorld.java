@@ -58,7 +58,7 @@ public class GameWorld extends World
         }
         
         if (tim.millisElapsed() * 1000 == timeCount.getValue()) { //if time limit is reached
-            LoseWorld endWorld = new LoseWorld();
+            EndWorld endWorld = new EndWorld();
             Greenfoot.setWorld(endWorld);
         }
 

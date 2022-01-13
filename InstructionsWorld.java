@@ -37,9 +37,9 @@ public class InstructionsWorld extends World
         
         // buttons
         backButton = new Button ("Go Back");
-        addObject (backButton, 150, 720);
+        addObject (backButton, 180, 720);
         startButton = new Button ("Start Game");
-        addObject (startButton, 570, 720);
+        addObject (startButton, 540, 720);
     }
     
     public void act(){
