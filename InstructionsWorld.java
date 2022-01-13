@@ -33,6 +33,7 @@ public class InstructionsWorld extends World
         background.setFont(subtitleFont);
         background.drawString("Move using the left and right arrow keys", 80, 200);
         background.drawString("Shoot targets using the space bar", 80, 230);
+        background.drawString("Hit targets to get points!", 80, 270);
         
         // buttons
         backButton = new Button ("Go Back");
