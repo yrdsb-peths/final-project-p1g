@@ -63,4 +63,27 @@ public class GameWorld extends World
         }
 
     }
+    
+    /**
+     * A simple sorting algorithm
+     * @param arr An integer array
+     */
+    public void insertionSort(int[] arr)
+    {
+        int N = arr.length;
+        for(int i = 1; i < N; i++)
+        {
+            for(int j = i; j > 0; j--)
+            {
+                if(arr[j] < arr[j-1])
+                {
+                    ArrayUtil.swap(arr, j, j-1);
+                }
+                else
+                {
+                    break;
+                }
+            }
+        }
+    }
 }
