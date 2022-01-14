@@ -8,6 +8,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class GameWorld extends World
 {
+    private Player player;
     SimpleTimer tim = new SimpleTimer();
     Counter timeCount = new Counter();
     //Player stats
@@ -25,6 +26,9 @@ public class GameWorld extends World
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(720, 900, 1); 
         prepare();
+        
+        player = new Player();
+        addObject(player, 360, 760);
     }
     
     /**
