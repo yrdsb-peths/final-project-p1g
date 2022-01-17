@@ -1,7 +1,7 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class Player here.
+ * Player class. In charge of player movement and shooting.
  * 
  * @author (your name) 
  * @version (a version number or a date)
@@ -14,6 +14,7 @@ public class Player extends Actor
      */
     public void act()
     {
+        // movement
         if(Greenfoot.isKeyDown("left"))
         {
             setLocation(getX() - 5, getY());
@@ -21,6 +22,12 @@ public class Player extends Actor
         if(Greenfoot.isKeyDown("right"))
         {
             setLocation(getX() + 5, getY());
+        }
+        
+        // shoot
+        if(Greenfoot.isKeyDown("space"))
+        {
+            getWorld().addObject(new Bullet(), getX(), getY());
         }
     }
 }
