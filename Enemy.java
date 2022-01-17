@@ -1,7 +1,8 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class Enemy here.
+ * This world is in charge of moving the enemy and removing it from
+ * the world when it gets too close to the bottom of the screen.
  * 
  * @author Sherman, Marissa, and Carmen
  * @version 09/01/22
@@ -14,6 +15,11 @@ public class Enemy extends Actor
      */
     public void act()
     {
-        // Add your action code here.
+        setLocation(getX(), getY() + 10);
+        
+        if (getY() > 895)
+        {
+            getWorld().removeObject(this);
+        }
     }
 }
