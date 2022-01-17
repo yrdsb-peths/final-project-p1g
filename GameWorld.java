@@ -9,7 +9,6 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class GameWorld extends World
 {
     private Player player;
-    private Enemy enemy;
     SimpleTimer tim = new SimpleTimer();
     Counter timeCount = new Counter();
     //Player stats
@@ -30,9 +29,6 @@ public class GameWorld extends World
         
         player = new Player();
         addObject(player, 360, 760);
-        
-        enemy = new Enemy();
-        addObject(enemy, 360, 220);
     }
     
     /**
