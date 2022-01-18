@@ -12,6 +12,13 @@ public class Bullet extends Actor
      * Act - do whatever the Bullet wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
+    public Bullet()
+    {
+        GreenfootImage bulletSprite = getImage();
+        int newHeight = bulletSprite.getHeight()+10;
+        int newWidth = bulletSprite.getWidth()+10;
+        bulletSprite.scale(newWidth, newHeight);
+    }
     public void act()
     {
         setLocation(getX(), getY() - 10);

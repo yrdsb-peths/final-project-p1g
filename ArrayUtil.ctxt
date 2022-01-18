@@ -1,15 +1,15 @@
 #BlueJ class context
 comment0.target=ArrayUtil
-comment0.text=\n\ Write\ a\ description\ of\ class\ ArrayUtil\ here.\n\ \n\ @author\ (your\ name)\ \n\ @version\ (a\ version\ number\ or\ a\ date)\n
+comment0.text=\r\n\ Write\ a\ description\ of\ class\ ArrayUtil\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
 comment1.params=arr
 comment1.target=void\ setup(int[])
-comment1.text=\n\ Set\ up\ the\ array\ so\ that\ every\ element\ has\ a\ value\ that\ is\ an\ integer\n\ from\ 1\ to\ the\ length\ of\ the\ array\ (1\ -\ N).\n\ @param\ arr\ An\ array\ of\ integers\n
+comment1.text=\r\n\ Set\ up\ the\ array\ so\ that\ every\ element\ has\ a\ value\ that\ is\ an\ integer\r\n\ from\ 1\ to\ the\ length\ of\ the\ array\ (1\ -\ N).\r\n\ @param\ arr\ An\ array\ of\ integers\r\n
 comment2.params=arr
 comment2.target=void\ setupTwo(int[])
 comment3.params=arr\ i\ j
 comment3.target=void\ swap(int[],\ int,\ int)
-comment3.text=\n\ TODO\:\ Implement\ this\ method\n\ Swap\ elements\ at\ index\ positions\ i\ and\ j\ in\ the\ given\ array.\ \ \n\ @param\ arr\ An\ integer\ array\n\ @param\ a\ The\ index\ of\ one\ of\ the\ elements\ to\ swap\n\ @param\ b\ The\ index\ of\ the\ other\ element\ to\ swap\ with\n
+comment3.text=\r\n\ TODO\:\ Implement\ this\ method\r\n\ Swap\ elements\ at\ index\ positions\ i\ and\ j\ in\ the\ given\ array.\ \ \r\n\ @param\ arr\ An\ integer\ array\r\n\ @param\ a\ The\ index\ of\ one\ of\ the\ elements\ to\ swap\r\n\ @param\ b\ The\ index\ of\ the\ other\ element\ to\ swap\ with\r\n
 comment4.params=arr
 comment4.target=void\ shuffle(int[])
-comment4.text=\n\ Shuffle\ an\ array\ using\ the\ Fisher-Yates\ method.\n\ The\ Fisher-Yates\ method\ iterates\ the\ array\ once,\ swapping\ each\n\ element\ with\ a\ random\ element\ chosen\ in\ the\ range\ between\n\ the\ current\ position\ to\ the\ length\ of\ the\ array.\n\ @param\ arr\ An\ array\ of\ integers\n
+comment4.text=\r\n\ Shuffle\ an\ array\ using\ the\ Fisher-Yates\ method.\r\n\ The\ Fisher-Yates\ method\ iterates\ the\ array\ once,\ swapping\ each\r\n\ element\ with\ a\ random\ element\ chosen\ in\ the\ range\ between\r\n\ the\ current\ position\ to\ the\ length\ of\ the\ array.\r\n\ @param\ arr\ An\ array\ of\ integers\r\n
 numComments=5
