@@ -11,7 +11,7 @@ public class GameWorld extends World
     private Player player;
     
     SimpleTimer tim = new SimpleTimer();
-    Counter timeCount = new Counter();
+    public static Counter timeCount = new Counter();
     
     //Player stats
     int hp = 3;
@@ -52,11 +52,12 @@ public class GameWorld extends World
     }
     
     public void spawnEnemy(){
-        Enemy enemy = new Enemy();
-        int x = Greenfoot.getRandomNumber(getWidth());
-        int y = 0;
-        addObject(enemy, x, y);
-        
+        if (Greenfoot.getRandomNumber(20) == 1){
+            Enemy enemy = new Enemy();
+            int x = Greenfoot.getRandomNumber(getWidth());
+            int y = 0;
+            addObject(enemy, x, y);
+        }
     }
     
     public void act()

@@ -21,9 +21,11 @@ public class Enemy extends Actor
         int newWidth = enemySprite.getWidth()/8;
         enemySprite.scale(newWidth, newHeight);
     }
+    
+    
     public void act()
     {
-        setLocation(getX(), getY() + 10);
+        setLocation(getX(), getY() + 5);
         
         if (getY() > 895)
         {

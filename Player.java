@@ -20,6 +20,7 @@ public class Player extends Actor
         int newWidth = playerSprite.getWidth()-15;
         playerSprite.scale(newWidth, newHeight);
     }
+    
     public void act()
     {
         // movement
@@ -32,6 +33,13 @@ public class Player extends Actor
             setLocation(getX() + 5, getY());
         }
         shoot();
+        
+        // Checks to see if an enemt hit the player
+        Enemy e = (Enemy) getOneIntersectingObject(Enemy.class);
+        if (e != null)
+        {
+            Greenfoot.setWorld(new EndWorld());
+        }
     }
     
     public void shoot()
