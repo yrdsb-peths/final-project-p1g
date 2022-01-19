@@ -9,10 +9,13 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class GameWorld extends World
 {
     private Player player;
+    
     SimpleTimer tim = new SimpleTimer();
     Counter timeCount = new Counter();
+    
     //Player stats
     int hp = 3;
+    
     //Targets hit - Total score is equal to time + hits.
     //Final score calculation is to be calculated somewhere else
     int hits = 0;
@@ -29,6 +32,8 @@ public class GameWorld extends World
         
         player = new Player();
         addObject(player, 360, 760);
+        
+        int randX = Greenfoot.getRandomNumber(720);
     }
     
     /**
@@ -45,6 +50,7 @@ public class GameWorld extends World
         
         addObject(scoreLabel, 100, 60);
     }
+    
     public void act()
     {    
         timeCountDown();

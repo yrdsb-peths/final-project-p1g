@@ -1,9 +1,9 @@
 #BlueJ class context
 comment0.target=EndWorld
-comment0.text=\r\n\ If\ the\ games\ ends,\ the\ player\ goes\ to\ the\ EndWorld\r\n\ \r\n\ @author\ Sherman,\ Marissa,\ and\ Carmen\ \r\n\ @version\ January\ 2022\r\n
+comment0.text=\n\ If\ the\ games\ ends,\ the\ player\ goes\ to\ the\ EndWorld\n\ \n\ @author\ Sherman,\ Marissa,\ and\ Carmen\ \n\ @version\ January\ 2022\n
 comment1.params=
 comment1.target=EndWorld()
-comment1.text=\r\n\ Constructor\ for\ objects\ of\ class\ LoseWorld.\r\n\ \r\n
+comment1.text=\n\ Constructor\ for\ objects\ of\ class\ LoseWorld.\n\ \n
 comment2.params=
 comment2.target=void\ act()
 comment3.params=
