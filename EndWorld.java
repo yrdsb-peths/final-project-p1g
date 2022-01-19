@@ -29,7 +29,8 @@ public class EndWorld extends World
         background.setColor(Color.WHITE);
         background.drawString("Good job!", 300, 120);
         
-        // instructions
+        // subtitles
+        background.drawString("Your score was: " + GameWorld.score.getValue(), 220, 180);
         background.setFont(subtitleFont);
         background.drawString("Would you like to play again?", 220, 200);
         
