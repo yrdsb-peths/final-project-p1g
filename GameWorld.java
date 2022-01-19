@@ -13,13 +13,10 @@ public class GameWorld extends World
     SimpleTimer tim = new SimpleTimer();
     public static Counter timeCount = new Counter();
     
-    //Player stats
-    int hp = 3;
-    
     //Targets hit - Total score is equal to time + hits.
     //Final score calculation is to be calculated somewhere else
-    int hits = 0;
-    Label scoreLabel = new Label("Hits: " + hits, 30);
+    public static Counter score = new Counter();
+    //Label scoreLabel = new Label("Score: " + score, 30);
     /**
      * Constructor for objects of class GameWorld.
      * 
@@ -32,8 +29,6 @@ public class GameWorld extends World
         
         player = new Player();
         addObject(player, 360, 760);
-        
-        int randX = Greenfoot.getRandomNumber(720);
     }
     
     /**
@@ -48,7 +43,8 @@ public class GameWorld extends World
          */
         timeCount.setValue(20);
         
-        addObject(scoreLabel, 100, 60);
+        addObject(score, 100, 60);
+        score.setValue(0);
     }
     
     public void spawnEnemy(){
