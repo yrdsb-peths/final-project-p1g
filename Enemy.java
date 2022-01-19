@@ -13,6 +13,14 @@ public class Enemy extends Actor
      * Act - do whatever the Enemy wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
+    public Enemy()
+    {
+        // resize enemies
+        GreenfootImage enemySprite = getImage();
+        int newHeight = enemySprite.getHeight()/8;
+        int newWidth = enemySprite.getWidth()/8;
+        enemySprite.scale(newWidth, newHeight);
+    }
     public void act()
     {
         setLocation(getX(), getY() + 10);

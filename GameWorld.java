@@ -51,9 +51,18 @@ public class GameWorld extends World
         addObject(scoreLabel, 100, 60);
     }
     
+    public void spawnEnemy(){
+        Enemy enemy = new Enemy();
+        int x = Greenfoot.getRandomNumber(getWidth());
+        int y = 0;
+        addObject(enemy, x, y);
+        
+    }
+    
     public void act()
     {    
         timeCountDown();
+        spawnEnemy();
     }
     
     /**
