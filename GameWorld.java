@@ -20,8 +20,7 @@ public class GameWorld extends World
     int enemyCount = 1;
     private Enemy enemy1;
     //Stuff for score
-    public int score = 0;
-    String scoreString = Integer.toString(score);
+    public static Counter score = new Counter();
     /**
      * Constructor for objects of class GameWorld.
      * 
@@ -36,7 +35,6 @@ public class GameWorld extends World
         addObject(player, 360, 800);
         //Creates labels
         scoreLabel = new Label(0, 50);
-        addObject(scoreLabel, 150, 60);;
         addObject(scoreText, 100, 60);
     }
     
@@ -51,6 +49,7 @@ public class GameWorld extends World
          * Timer method. Value should be lower for hard stage
          */
         timeCount.setValue(20);
+        score.setValue(0);
     }
     
     public void act()
@@ -75,18 +74,6 @@ public class GameWorld extends World
     public Enemy getEnemy()
     {
         return enemy1;
-    }
-    
-    public void increaseScore()
-    {
-        score++;
-        scoreLabel.setValue(score);
-        if(score % 10 == 0)
-        {
-            level += 2;
-            magicInt -= 5;
-            System.out.println(level);
-        }
     }
     
     /**

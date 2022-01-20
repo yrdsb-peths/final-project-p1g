@@ -33,7 +33,7 @@ public class Bullet extends Actor
             getWorld().removeObject(Enemy);
             getWorld().removeObject(this);
             world.timeCount.add(2);
-            world.increaseScore();
+            world.score.add(1);
         }
         
         // if bullet gets to the top of the screen
