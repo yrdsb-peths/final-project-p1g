@@ -25,7 +25,7 @@ public class Enemy extends Actor
     
     public void act()
     {
-        setLocation(getX(), getY() + 5);
+        setLocation(getX(), getY() + 3);
         
         if (getY() > 895)
         {
