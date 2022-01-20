@@ -1,7 +1,7 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class GameWorld here.
+ * The main game. 
  * 
  * @author Sherman, Marissa, and Carmen
  * @version 13/01/22
@@ -12,30 +12,35 @@ public class GameWorld extends World
     private Player player;
     SimpleTimer tim = new SimpleTimer();
     public static Counter timeCount = new Counter();
-    Label scoreLabel;
-    Label scoreText = new Label("score", 50);
+    public static Counter score = new Counter();
+    
+    // labels
+    Label scoreText = new Label("score:", 30);
+    Label timerText = new Label("time:", 30);
+    
     //Stuff that adjusts difficulty
-    int magicInt = 69;
+    int magicInt = 70;
     int level = 1;
     int enemyCount = 1;
     private Enemy enemy1;
-    //Stuff for score
-    public static Counter score = new Counter();
+    
     /**
-     * Constructor for objects of class GameWorld.
-     * 
+     * Prepares GameWorld.
+     * Adds player and labels into the world.
      */
     public GameWorld()
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(720, 900, 1); 
         prepare();
+        
         //Creates player
         player = new Player();
         addObject(player, 360, 800);
+        
         //Creates labels
-        scoreLabel = new Label(0, 50);
         addObject(scoreText, 100, 60);
+        addObject(timerText, 500, 60);
     }
     
     /**
@@ -44,12 +49,13 @@ public class GameWorld extends World
      */
     private void prepare()
     {
-        addObject(timeCount,200,60);
-        /**
-         * Timer method. Value should be lower for hard stage
-         */
-        timeCount.setValue(20);
-        score.setValue(0);
+        // adds score and timer to world
+        addObject(timeCount,570,60);
+        addObject(score, 170, 60);
+        
+        // sets original value of score and time
+        timeCount.setValue(20); // time starts at 20 seconds
+        score.setValue(0); // score starts at 0
     }
     
     public void act()
@@ -63,6 +69,7 @@ public class GameWorld extends World
         }
     }
     
+    //spawns enemies randomly at the top of the screen
     public void addEnemy()
     {
         Enemy enemy = new Enemy();
@@ -77,8 +84,8 @@ public class GameWorld extends World
     }
     
     /**
-     * 
-     * 
+     * Timer
+     * Ends game when the time gets to 0
      */
     public void timeCountDown()
     {    
@@ -92,28 +99,5 @@ public class GameWorld extends World
             Greenfoot.setWorld(endWorld);
         }
 
-    }
-    
-    /**
-     * A simple sorting algorithm
-     * @param arr An integer array
-     */
-    public void insertionSort(int[] arr)
-    {
-        int N = arr.length;
-        for(int i = 1; i < N; i++)
-        {
-            for(int j = i; j > 0; j--)
-            {
-                if(arr[j] < arr[j-1])
-                {
-                    ArrayUtil.swap(arr, j, j-1);
-                }
-                else
-                {
-                    break;
-                }
-            }
-        }
     }
 }

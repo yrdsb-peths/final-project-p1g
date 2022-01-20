@@ -2,6 +2,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
  * If the games ends, the player goes to the EndWorld
+ * Sorts through the scores and shows the player their highscore
  * 
  * @author Sherman, Marissa, and Carmen 
  * @version January 2022
@@ -9,9 +10,12 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class EndWorld extends World
 {
     private GreenfootImage background;
+    
+    // Fonts
     private Font titleFont = new Font ("Calibri", false, false, 24);
     private Font subtitleFont = new Font ("Calibri", false, false, 20);
     
+    // Buttons
     private Button quitButton;
     private Button replayButton;
     /**
@@ -45,12 +49,36 @@ public class EndWorld extends World
         checkMouse();
     }
     
+    // Checks to see if the buttons have been clicked
     private void checkMouse(){
         if (Greenfoot.mouseClicked(quitButton)){
             Greenfoot.setWorld(new StartWorld());
         }
         if (Greenfoot.mouseClicked(replayButton)){
             Greenfoot.setWorld(new GameWorld());
+        }
+    }
+    
+    /**
+     * A simple sorting algorithm
+     * @param arr An integer array
+     */
+    public void insertionSort(int[] arr)
+    {
+        int N = arr.length;
+        for(int i = 1; i < N; i++)
+        {
+            for(int j = i; j > 0; j--)
+            {
+                if(arr[j] < arr[j-1])
+                {
+                    ArrayUtil.swap(arr, j, j-1);
+                }
+                else
+                {
+                    break;
+                }
+            }
         }
     }
 }
