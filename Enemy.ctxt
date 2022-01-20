@@ -1,9 +1,9 @@
 #BlueJ class context
 comment0.target=Enemy
-comment0.text=\n\ This\ world\ is\ in\ charge\ of\ moving\ the\ enemy\ and\ removing\ it\ from\n\ the\ world\ when\ it\ gets\ too\ close\ to\ the\ bottom\ of\ the\ screen.\n\ \n\ @author\ Sherman,\ Marissa,\ and\ Carmen\n\ @version\ 09/01/22\n
+comment0.text=\r\n\ This\ world\ is\ in\ charge\ of\ moving\ the\ enemy\ and\ removing\ it\ from\r\n\ the\ world\ when\ it\ gets\ too\ close\ to\ the\ bottom\ of\ the\ screen.\r\n\ \r\n\ @author\ Sherman,\ Marissa,\ and\ Carmen\r\n\ @version\ 09/01/22\r\n
 comment1.params=
 comment1.target=Enemy()
-comment1.text=\n\ Act\ -\ do\ whatever\ the\ Enemy\ wants\ to\ do.\ This\ method\ is\ called\ whenever\n\ the\ 'Act'\ or\ 'Run'\ button\ gets\ pressed\ in\ the\ environment.\n
+comment1.text=\r\n\ Act\ -\ do\ whatever\ the\ Enemy\ wants\ to\ do.\ This\ method\ is\ called\ whenever\r\n\ the\ 'Act'\ or\ 'Run'\ button\ gets\ pressed\ in\ the\ environment.\r\n
 comment2.params=
 comment2.target=void\ act()
 numComments=3

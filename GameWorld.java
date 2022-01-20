@@ -8,15 +8,19 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class GameWorld extends World
 {
+    //Stuff for world
     private Player player;
-    
     SimpleTimer tim = new SimpleTimer();
     public static Counter timeCount = new Counter();
-    
-    //Targets hit - Total score is equal to time + hits.
-    //Final score calculation is to be calculated somewhere else
+    Label scoreLabel;
+    Label scoreText = new Label("score", 50);
+    //Stuff that adjusts difficulty
+    int magicInt = 69;
+    int level = 1;
+    int enemyCount = 1;
+    private Enemy enemy1;
+    //Stuff for score
     public static Counter score = new Counter();
-    //Label scoreLabel = new Label("Score: " + score, 30);
     /**
      * Constructor for objects of class GameWorld.
      * 
@@ -26,9 +30,12 @@ public class GameWorld extends World
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(720, 900, 1); 
         prepare();
-        
+        //Creates player
         player = new Player();
-        addObject(player, 360, 760);
+        addObject(player, 360, 800);
+        //Creates labels
+        scoreLabel = new Label(0, 50);
+        addObject(scoreText, 100, 60);
     }
     
     /**
@@ -42,24 +49,31 @@ public class GameWorld extends World
          * Timer method. Value should be lower for hard stage
          */
         timeCount.setValue(20);
-        
-        addObject(score, 100, 60);
         score.setValue(0);
-    }
-    
-    public void spawnEnemy(){
-        if (Greenfoot.getRandomNumber(20) == 1){
-            Enemy enemy = new Enemy();
-            int x = Greenfoot.getRandomNumber(getWidth());
-            int y = 0;
-            addObject(enemy, x, y);
-        }
     }
     
     public void act()
     {    
         timeCountDown();
-        spawnEnemy();
+        enemyCount++;
+        if(enemyCount>magicInt)
+        {
+            addEnemy();
+            enemyCount = 0;
+        }
+    }
+    
+    public void addEnemy()
+    {
+        Enemy enemy = new Enemy();
+        int x = Greenfoot.getRandomNumber(getWidth());
+        int y = 0;
+        addObject(enemy, x, y);
+    }
+    
+    public Enemy getEnemy()
+    {
+        return enemy1;
     }
     
     /**

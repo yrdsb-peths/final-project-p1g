@@ -21,16 +21,19 @@ public class Bullet extends Actor
     }
     public void act()
     {
-        setLocation(getX(), getY() - 10);
-        
-        // Checks to see if a bullet hit an enemy
-        Enemy e = (Enemy) getOneIntersectingObject(Enemy.class);
-        if (e != null)
+        setLocation(getX(), getY() - 7);
+        removeFromWorld();
+    }
+    public void removeFromWorld()
+    {
+        GameWorld world = (GameWorld) getWorld();
+        Actor Enemy =  getOneIntersectingObject(Enemy.class);
+        if (Enemy != null)
         {
-            getWorld().removeObject(e);
+            getWorld().removeObject(Enemy);
             getWorld().removeObject(this);
-            GameWorld.timeCount.add(1);
-            GameWorld.score.add(1);
+            world.timeCount.add(2);
+            world.score.add(1);
         }
         
         // if bullet gets to the top of the screen
