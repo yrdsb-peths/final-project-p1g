@@ -17,7 +17,10 @@ public class StartWorld extends World
     musicButton sound;
     //Stuff that controls sound
     public static boolean soundStatus = true;
-    
+
+    // Background music
+    GreenfootSound bgm = new GreenfootSound("background-music.mp3");
+
     /**
      * Constructor for objects of class StartWorld.
      * 
@@ -27,12 +30,12 @@ public class StartWorld extends World
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(720, 900, 1);
         background = getBackground();
-        
+
         // title
         background.setFont(titleFont);
         background.setColor(Color.WHITE);
         background.drawString("Insert Name Here", 260, 120);
-        
+
         // buttons
         instructionsButton = new Button ("Instructions");
         addObject (instructionsButton, 150, 720);
@@ -40,13 +43,14 @@ public class StartWorld extends World
         addObject (startButton, 570, 720);
         sound = new musicButton();
         addObject(sound, 360, 780);
+
     }
-    
+
     public void act(){
         checkMouse();
         playSound();
     }
-    
+
     private void checkMouse(){
         if (Greenfoot.mouseClicked(instructionsButton)){
             Greenfoot.setWorld(new InstructionsWorld());
@@ -55,24 +59,24 @@ public class StartWorld extends World
             Greenfoot.setWorld(new GameWorld());
         }
     }
-    
+
     public void playSound()
     {    
         if (Greenfoot.mouseClicked(sound)) { //if user clicked music off
             if(soundStatus) {
                 soundStatus = false;
-                //bgm.stop(); //stop music
+                bgm.stop(); //stop music
                 sound.setImage("musicOff.jpg"); //change image to off
                 sound.getImage().scale(sound.getImage().getWidth()/6, sound.getImage().getHeight()/6);
             } else {
                 soundStatus = true;
-                //bgm.playLoop(); //play music
+                bgm.playLoop(); //play music
                 sound.setImage("musicOn.png"); //change image to on
                 sound.getImage().scale(sound.getImage().getWidth()/6, sound.getImage().getHeight()/6);   
             }
         } else{
             if (soundStatus) { //if music is on
-                //bgm.playLoop();
+                bgm.playLoop();
             }
         }
     }
