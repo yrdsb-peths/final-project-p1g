@@ -47,6 +47,7 @@ public class Player extends Actor
         if(Greenfoot.isKeyDown("space") && canFire == true)
         {
             getWorld().addObject(new Bullet(), getX(), getY());
+            Greenfoot.playSound("sounds/shoot.wav");
             canFire = false;
         }
         else if(!Greenfoot.isKeyDown("space"))

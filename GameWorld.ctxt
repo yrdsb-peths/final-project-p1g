@@ -1,12 +1,12 @@
 #BlueJ class context
 comment0.target=GameWorld
-comment0.text=\n\ The\ main\ game.\ \n\ \n\ @author\ Sherman,\ Marissa,\ and\ Carmen\n\ @version\ 13/01/22\n
+comment0.text=\r\n\ The\ main\ game.\ \r\n\ \r\n\ @author\ Sherman,\ Marissa,\ and\ Carmen\r\n\ @version\ 13/01/22\r\n
 comment1.params=
 comment1.target=GameWorld()
-comment1.text=\n\ Prepares\ GameWorld.\n\ Adds\ player\ and\ labels\ into\ the\ world.\n
+comment1.text=\r\n\ Prepares\ GameWorld.\r\n\ Adds\ player\ and\ labels\ into\ the\ world.\r\n
 comment2.params=
 comment2.target=void\ prepare()
-comment2.text=\n\ Prepare\ the\ world\ for\ the\ game\ page\ of\ the\ program.\n\ That\ is\:\ create\ the\ initial\ objects\ and\ add\ them\ to\ the\ world.\n
+comment2.text=\r\n\ Prepare\ the\ world\ for\ the\ game\ page\ of\ the\ program.\r\n\ That\ is\:\ create\ the\ initial\ objects\ and\ add\ them\ to\ the\ world.\r\n
 comment3.params=
 comment3.target=void\ act()
 comment4.params=
@@ -15,5 +15,5 @@ comment5.params=
 comment5.target=Enemy\ getEnemy()
 comment6.params=
 comment6.target=void\ timeCountDown()
-comment6.text=\n\ Timer\n\ Ends\ game\ when\ the\ time\ gets\ to\ 0\n
+comment6.text=\r\n\ Timer\r\n\ Ends\ game\ when\ the\ time\ gets\ to\ 0\r\n
 numComments=7

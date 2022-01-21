@@ -11,9 +11,13 @@ public class StartWorld extends World
     private GreenfootImage background;
     private Font titleFont = new Font ("Calibri", false, false, 24);
     private Font subtitleFont = new Font ("Calibri", false, false, 20);
-    
+    //buttons
     private Button instructionsButton;
     private Button startButton;
+    musicButton sound;
+    //Stuff that controls sound
+    public static boolean soundStatus = true;
+    
     /**
      * Constructor for objects of class StartWorld.
      * 
@@ -34,10 +38,13 @@ public class StartWorld extends World
         addObject (instructionsButton, 150, 720);
         startButton = new Button ("Start Game");
         addObject (startButton, 570, 720);
+        sound = new musicButton();
+        addObject(sound, 360, 780);
     }
     
     public void act(){
         checkMouse();
+        playSound();
     }
     
     private void checkMouse(){
@@ -46,6 +53,27 @@ public class StartWorld extends World
         }
         if (Greenfoot.mouseClicked(startButton)){
             Greenfoot.setWorld(new GameWorld());
+        }
+    }
+    
+    public void playSound()
+    {    
+        if (Greenfoot.mouseClicked(sound)) { //if user clicked music off
+            if(soundStatus) {
+                soundStatus = false;
+                //bgm.stop(); //stop music
+                sound.setImage("musicOff.jpg"); //change image to off
+                sound.getImage().scale(sound.getImage().getWidth()/6, sound.getImage().getHeight()/6);
+            } else {
+                soundStatus = true;
+                //bgm.playLoop(); //play music
+                sound.setImage("musicOn.png"); //change image to on
+                sound.getImage().scale(sound.getImage().getWidth()/6, sound.getImage().getHeight()/6);   
+            }
+        } else{
+            if (soundStatus) { //if music is on
+                //bgm.playLoop();
+            }
         }
     }
 }

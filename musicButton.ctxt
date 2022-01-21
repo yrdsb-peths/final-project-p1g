@@ -1,7 +1,7 @@
 #BlueJ class context
 comment0.target=musicButton
-comment0.text=\n\ MusicButton\ Class\ -\ An\ object\ in\ which\ the\ user\ can\ click\ on\n\ \n\ @author\ Sherman\n\ @version\ January\ 2022\n
+comment0.text=\r\n\ MusicButton\ Class\ -\ An\ object\ in\ which\ the\ user\ can\ click\ on\r\n\ \r\n\ @author\ Sherman\r\n\ @version\ January\ 2022\r\n
 comment1.params=
 comment1.target=musicButton()
-comment1.text=\n\ Constructor\ for\ MusicButton\ Class\ -\ resizes\ the\ image\n
+comment1.text=\r\n\ Constructor\ for\ MusicButton\ Class\ -\ resizes\ the\ image\r\n
 numComments=2
