@@ -4,9 +4,11 @@ Tell the reader (someone who does not know anything about this project)
 all they need to know. The comments should usually include at least:
 ------------------------------------------------------------------------
 
-PROJECT TITLE:
-PURPOSE OF PROJECT:
+PROJECT TITLE: ICS4U final 
+PURPOSE OF PROJECT: Demonstrate use of recursions and sorting algorithms * 
 VERSION or DATE:
-HOW TO START THIS PROJECT:
-AUTHORS:
-USER INSTRUCTIONS:
+HOW TO START THIS PROJECT: Launch it on greenfoot
+AUTHORS: Carmen, Sherman, Marissa
+USER INSTRUCTIONS: Use left and right arrow keys to move. Space is to shoot
+
+*Sorting algorithn and recursion can be found in EndWorld, where high scores are sorted
