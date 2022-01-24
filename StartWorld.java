@@ -9,7 +9,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class StartWorld extends World
 {
     private GreenfootImage background;
-    private Font titleFont = new Font ("Calibri", false, false, 24);
+    private Font titleFont = new Font ("Calibri", false, false, 40);
     private Font subtitleFont = new Font ("Calibri", false, false, 20);
     //buttons
     private Button instructionsButton;
@@ -34,7 +34,7 @@ public class StartWorld extends World
         // title
         background.setFont(titleFont);
         background.setColor(Color.WHITE);
-        background.drawString("Insert Name Here", 260, 120);
+        background.drawString("Space Shooters", 260, 120);
 
         // buttons
         instructionsButton = new Button ("Instructions");
