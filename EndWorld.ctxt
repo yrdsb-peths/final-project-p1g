@@ -1,14 +1,14 @@
 #BlueJ class context
 comment0.target=EndWorld
-comment0.text=\r\n\ If\ the\ games\ ends,\ the\ player\ goes\ to\ the\ EndWorld\r\n\ Sorts\ through\ the\ scores\ and\ shows\ the\ player\ their\ highscore\r\n\ \r\n\ @author\ Sherman,\ Marissa,\ and\ Carmen\ \r\n\ @version\ January\ 2022\r\n
+comment0.text=\n\ If\ the\ games\ ends,\ the\ player\ goes\ to\ the\ EndWorld\n\ Sorts\ through\ the\ scores\ and\ shows\ the\ player\ their\ highscore\n\ \n\ @author\ Sherman,\ Marissa,\ and\ Carmen\ \n\ @version\ January\ 2022\n
 comment1.params=
 comment1.target=EndWorld()
-comment1.text=\r\n\ Constructor\ for\ objects\ of\ class\ LoseWorld.\r\n\ \r\n
+comment1.text=\n\ Constructor\ for\ objects\ of\ class\ LoseWorld.\n\ \n
 comment2.params=
 comment2.target=void\ act()
 comment3.params=
 comment3.target=void\ checkMouse()
 comment4.params=arr
 comment4.target=void\ insertionSort(int[])
-comment4.text=\r\n\ A\ simple\ sorting\ algorithm\r\n\ @param\ arr\ An\ integer\ array\r\n
+comment4.text=\n\ A\ simple\ sorting\ algorithm\n\ @param\ arr\ An\ integer\ array\n
 numComments=5

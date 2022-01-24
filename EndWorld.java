@@ -34,9 +34,11 @@ public class EndWorld extends World
         background.drawString("Good job!", 300, 120);
         
         // subtitles
-        background.drawString("Your score was: " + GameWorld.score.getValue(), 220, 180);
         background.setFont(subtitleFont);
-        background.drawString("Would you like to play again?", 220, 200);
+        background.drawString("Your score was: " + GameWorld.score.getValue(), 220, 180);
+        background.drawString("Would you like to play again?", 220, 230);
+        
+        addObject(new HighScore(), 220, 600);
         
         // buttons
         quitButton = new Button ("Quit");
