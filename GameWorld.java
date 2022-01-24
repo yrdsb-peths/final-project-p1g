@@ -19,11 +19,10 @@ public class GameWorld extends World
     Label timerText = new Label("time:", 30);
     
     //Stuff that adjusts difficulty
-    int magicInt = 70;
     int level = 1;
     int enemyCount = 1;
     private Enemy enemy1;
-    
+    int magicInt = 61;
     /**
      * Prepares GameWorld.
      * Adds player and labels into the world.
@@ -33,7 +32,6 @@ public class GameWorld extends World
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(720, 900, 1); 
         prepare();
-        
         //Creates player
         player = new Player();
         addObject(player, 360, 800);
@@ -41,6 +39,7 @@ public class GameWorld extends World
         //Creates labels
         addObject(scoreText, 100, 60);
         addObject(timerText, 500, 60);
+        
     }
     
     /**
@@ -58,9 +57,11 @@ public class GameWorld extends World
         score.setValue(0); // score starts at 0
     }
     
+    
     public void act()
     {    
         timeCountDown();
+        //difficulty(magicInt);
         enemyCount++;
         if(enemyCount>magicInt)
         {
@@ -69,6 +70,15 @@ public class GameWorld extends World
         }
     }
     
+    //this is a recursive method used to increase difficulty. it's too unstable, and if you guys can fix it that'd be cool
+    //public int difficulty(int x)
+    //{
+        //if(score.getValue() % 10 == 0)
+        //{
+            //return difficulty(x) - 5;
+        //}
+        //return 0;
+    //}
     //spawns enemies randomly at the top of the screen
     public void addEnemy()
     {
@@ -77,12 +87,11 @@ public class GameWorld extends World
         int y = 0;
         addObject(enemy, x, y);
     }
-    
     public Enemy getEnemy()
     {
         return enemy1;
     }
-    
+
     /**
      * Timer
      * Ends game when the time gets to 0
