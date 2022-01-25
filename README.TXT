@@ -11,4 +11,5 @@ HOW TO START THIS PROJECT: Launch it on greenfoot
 AUTHORS: Carmen, Sherman, Marissa
 USER INSTRUCTIONS: Use left and right arrow keys to move. Space is to shoot
 
-*Sorting algorithn and recursion can be found in EndWorld, where high scores are sorted
+*Sorting algorithm and recursion can be found in EndWorld, where high scores are sorted, and in the GameWorld, where a recursion is used to
+increase difficulty based on score
